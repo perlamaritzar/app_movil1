@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'home_screen.dart'; // Importar la nueva pantalla
+import 'home_screen.dart'; // Importar la pantalla de inicio
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -17,7 +17,27 @@ class MyApp extends StatelessWidget {
       ),
       // Eliminar el banner de debug
       debugShowCheckedModeBanner: false,
-      home: LoginScreen(),
+      home: const SplashScreen(), // Mostrar la pantalla de presentación al inicio
+    );
+  }
+}
+
+class SplashScreen extends StatelessWidget {
+  const SplashScreen({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    Future.delayed(const Duration(seconds: 3), () {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => const LoginScreen()), // Navegar a la pantalla de login
+      );
+    });
+
+    return Scaffold(
+      body: Center(
+        child: Image.asset('assets/splash.png'), // Asegúrate de que la imagen esté en esta ruta
+      ),
     );
   }
 }
@@ -37,12 +57,12 @@ class _LoginScreenState extends State<LoginScreen> {
     String username = _usernameController.text;
     String password = _passwordController.text;
 
-    if (username == 'usuario' && password == '1234') {
+    if (username == 'Maritza' && password == '1234') {
       // Simula inicio de sesión exitoso y navega a la pantalla HomeScreen
-      print('Login exitoso. Bienvenido $username');
-      Navigator.push(
+      print('Login exitoso. Bienvenido(a) $username');
+      Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => HomeScreen(username: username)),
+        MaterialPageRoute(builder: (context) => HomeScreen(username: username)), // Navega a HomeScreen con el username
       );
     } else {
       // Simula fallo de inicio de sesión

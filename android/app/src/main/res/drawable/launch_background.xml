@@ -10,3 +10,13 @@
             android:src="@mipmap/launch_image" />
     </item> -->
 </layer-list>
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/white"/> <!-- Cambia esto al color que prefieras -->
+    <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/splash_image"/> <!-- Nombre del archivo de imagen que usarás -->
+    </item>
+</layer-list>
+
