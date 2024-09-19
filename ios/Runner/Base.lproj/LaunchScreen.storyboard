@@ -31,7 +31,25 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <scenes>
+        <!-- Splash Screen -->
+        <scene sceneID="ehf-io-QiF">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="SplashImage" translatesAutoresizingMaskIntoConstraints="NO" id="I9k-7v-euN">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
+                    </view>
+                </viewController>
+            </objects>
+        </scene>
+    </scenes>
     <resources>
         <image name="LaunchImage" width="168" height="185"/>
     </resources>
 </document>
+

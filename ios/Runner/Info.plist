@@ -2,6 +2,19 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>$(DEVELOPMENT_LANGUAGE)</string>
+    <key>CFBundleDisplayName</key>
+    <string>App Disap1</string>
+    <key>CFBundleIdentifier</key>
+    <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+    <key>UILaunchStoryboardName</key>
+    <string>LaunchScreen</string> <!-- Este es el nombre de tu storyboard -->
+    <key>NSCameraUsageDescription</key>
+    <string>We need access to the camera to take pictures.</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>We need access to the photo library to save pictures.</string>
+    <!-- Otros elementos existentes -->
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>

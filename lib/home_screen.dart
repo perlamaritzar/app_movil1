@@ -7,7 +7,7 @@ import 'package:path/path.dart';
 class HomeScreen extends StatefulWidget {
   final String username;
 
-  HomeScreen({required this.username});
+  const HomeScreen({super.key, required this.username});
 
   @override
   _HomeScreenState createState() => _HomeScreenState();
@@ -42,17 +42,19 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Pantalla de Inicio'),
+        title: const Text('Pantalla de Inicio'),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              '¡Bienvenido ${widget.username}!',
-              style: TextStyle(fontSize: 24),
+              '¡Bienvenido(a) ${widget.username}!',
+
+              // Estilo del texto de bienvenida
+              style: const TextStyle(fontSize: 24),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             _image != null
                 ? Image.file(
                     _image!,
@@ -60,11 +62,11 @@ class _HomeScreenState extends State<HomeScreen> {
                     height: 300,
                     fit: BoxFit.cover,
                   )
-                : Text('No hay imagen seleccionada.'),
-            SizedBox(height: 20),
+                : const Text('No hay imagen seleccionada.'),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: _takePicture,
-              child: Text('Tomar una Foto'),
+              child: const Text('Tomar una Foto'),
             ),
           ],
         ),
